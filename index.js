@@ -29,7 +29,12 @@ class Route{
 
   }
 
-  estimatedTime(){
+  estimatedTime(peak){
+    if (peak){
+       return this.blocksTravelled() * .5;
+    } else {
+       return this.blocksTravelled() * (1/3);
+    }
 
   }
 }
